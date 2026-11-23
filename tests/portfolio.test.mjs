@@ -219,3 +219,23 @@ test('five engineering focus areas are prioritized without removing other skills
   assert.equal(translate('Development & Deployment','id'),'Pengembangan & Deployment');
   assert.ok(main.includes('usePortfolioMotion(caseStudySlug)'));
 });
+
+test('Fundly and TokoFlow cards have navigable case studies and accurate non-production status',async()=>{
+ const cards=read('src/EngineeringProfile.jsx');
+ const routes=read('src/main.jsx');
+ const detail=read('src/ProjectCaseStudy.jsx');
+ const {translate}=await import('../src/i18n.js');
+ for(const slug of ['fundly','tokoflow']){
+  assert.ok(cards.includes("slug:'"+slug+"'"),'card missing: '+slug);
+  assert.ok(routes.includes("'"+slug+"'"),'route missing: '+slug);
+  assert.ok(detail.includes('  '+slug+': {'),'detail missing: '+slug);
+ }
+ assert.match(cards,/Fundly/);
+ assert.match(cards,/TokoFlow POS/);
+ assert.match(cards,/POS IN DEVELOPMENT/);
+ assert.match(detail,/production acceptance testing pending/);
+ assert.match(detail,/not a synchronized financial account/);
+ assert.ok(!detail.includes('https://github.com/MarcelloWijaya/fundly'));
+ assert.ok(!detail.includes('https://github.com/MarcelloWijaya/tokoflow-pos'));
+ assert.equal(translate('PERSONAL PROJECT · POS IN DEVELOPMENT','id'),'PROYEK PRIBADI · POS DALAM PENGEMBANGAN');
+});

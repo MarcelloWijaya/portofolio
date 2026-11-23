@@ -474,6 +474,26 @@ Object.assign(id, {
   "Keep internal data and source repositories private.": "Jaga data internal dan repository sumber tetap privat.",
   "In-development local MVP. Real-device scanning, complete integration tests, and production sign-off are still pending. MySQL is supported as an alternative local setup; no production database is asserted.": "MVP lokal dalam pengembangan. Uji scanner perangkat nyata, integrasi menyeluruh, dan persetujuan produksi masih tertunda. MySQL tersedia sebagai alternatif setup lokal; database produksi belum diklaim."
 });
+Object.assign(id, {
+  "PERSONAL PROJECT · WEB/PWA & MOBILE PREVIEW": "PROYEK PRIBADI · WEB/PWA & PRATINJAU MOBILE",
+  "PERSONAL PROJECT · POS IN DEVELOPMENT": "PROYEK PRIBADI · POS DALAM PENGEMBANGAN",
+  "A personal and shared finance tracker for income, expenses, credit cards, installments, and manually recorded assets.": "Aplikasi pengelolaan keuangan pribadi dan bersama untuk pemasukan, pengeluaran, kartu kredit, cicilan, dan pencatatan aset manual.",
+  "Organize financial transactions and monthly summaries across personal or shared workspaces": "Mengelola transaksi dan ringkasan bulanan di workspace pribadi atau bersama",
+  "Review credit-card statement entries and CSV imports before saving, and track manual asset positions": "Meninjau catatan tagihan kartu kredit dan impor CSV sebelum disimpan serta mencatat posisi aset manual",
+  "Explore online web/PWA workflows and an offline Expo mobile preview; offline data does not automatically sync": "Mengembangkan web/PWA online dan pratinjau mobile Expo offline; data offline tidak otomatis tersinkronisasi",
+  "Development and preview workflows. Native Laravel API integration is a prototype; no live bank synchronization or verified Android/iOS release is claimed.": "Masih dalam pengembangan dan pratinjau. Integrasi API Laravel native masih prototipe; sinkronisasi bank langsung dan rilis Android/iOS terverifikasi belum tersedia.",
+  "A single-store retail point-of-sale and inventory application with cashier, purchasing, stock monitoring, and product management workflows.": "Aplikasi kasir dan persediaan untuk satu toko dengan alur kasir, pembelian, pemantauan stok, dan pengelolaan produk.",
+  "Provide product, cashier, purchase, and inventory interfaces with SKU/barcode support and multi-unit stock handling": "Menyediakan antarmuka produk, kasir, pembelian, dan persediaan dengan SKU/barcode serta satuan stok berbeda",
+  "Support stock counts, expiry batches, promotions, discounts, audit history, and thermal receipt layouts": "Mendukung penghitungan stok, batch kedaluwarsa, promo, diskon, riwayat audit, dan tata letak struk thermal",
+  "Integrate a Google-account-owned Sheets ledger through server-side APIs; production persistence and hardware tests still require validation": "Integrasi ledger Sheets milik akun Google melalui API server; penyimpanan production dan pengujian hardware masih memerlukan validasi",
+  "In development, not verified production-ready. Google login, online persistence, scanner hardware, printing, concurrency, and backup/restore require acceptance testing.": "Masih dikembangkan, belum terverifikasi siap produksi. Login Google, penyimpanan online, perangkat scanner, printer, konkurensi, dan backup/restore memerlukan uji penerimaan.",
+  "Keep everyday finance records organized": "Menata pencatatan keuangan sehari-hari",
+  "CARD & ASSET WORKFLOWS": "ALUR KARTU KREDIT & ASET",
+  "IMPLEMENTATION & LIMITS": "IMPLEMENTASI & BATASAN",
+  "STORE OPERATIONS": "OPERASIONAL TOKO",
+  "DATA & LOGIN": "DATA & LOGIN",
+  "VALIDATION & LIMITS": "VALIDASI & BATASAN"
+});
 export const availableLanguages = ['en','id'];
 export function translate(value, language='en') {
   if (value == null || language !== 'id') return value;

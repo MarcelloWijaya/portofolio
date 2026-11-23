@@ -6,6 +6,60 @@ import { BrandMark } from './BrandMark';
 import { t } from './i18n';
 
 const caseStudies = {
+  fundly: {
+    title:'Fundly',
+    status:'PERSONAL PROJECT · WEB/PWA & MOBILE PREVIEW',
+    summary:'A finance tracker that organizes personal or shared financial records, transactions, credit-card entries, installments, and manual asset snapshots.',
+    role:'Independent finance software project',
+    format:'Web/PWA with experimental React Native mobile preview',
+    statusDetail:'Development and preview · bank sync and mobile release not verified',
+    sections:[
+      {label:'PRODUCT SCOPE',title:'Keep everyday finance records organized',intro:'Fundly combines transaction tracking and account-oriented reporting with personal and shared workspace concepts.',points:[
+        'Record income, expenses, transfers, and installment progress with attention to avoiding duplicate financial totals.',
+        'Review monthly summaries, manually recorded assets, and credit-card statements.',
+        'Separate personal workspace data and shared-workspace access in the online architecture.'
+      ]},
+      {label:'CARD & ASSET WORKFLOWS',title:'Make manual financial data reviewable',intro:'The web modules include credit-card statement records and manual asset-position snapshots.',points:[
+        'Import supported credit-card CSV statements with a review-and-confirm step.',
+        'Track statement values and manually recorded stock, bond, or bank positions.',
+        'Keep market-value snapshots distinct from a live bank feed or official net-worth calculation.'
+      ]},
+      {label:'IMPLEMENTATION & LIMITS',title:'Web workflows and a separate mobile preview',intro:'The project combines a Vercel-hostable web/PWA codebase with an Expo/React Native preview; its prototype Laravel backend is separate.',points:[
+        'Develop web functionality using JavaScript, Node/Vercel Functions, and Google Sheets-backed workspace storage.',
+        'Explore Android/iOS offline preview with Expo, React Native, TypeScript, and local SQLite storage.',
+        'Do not claim automatic web-to-mobile sync, live banking integrations, or a tested public mobile release.'
+      ]}
+    ],
+    stack:['JavaScript','Node.js','Vercel Functions','Google Sheets','React Native','Expo','TypeScript','SQLite'],
+    note:'In development. Mobile offline preview is a separate local-data experience, not a synchronized financial account; native API integration and published APK have not been verified.'
+  },
+  tokoflow: {
+    title:'TokoFlow POS',
+    status:'PERSONAL PROJECT · POS IN DEVELOPMENT',
+    summary:'A single-store retail point-of-sale and inventory system built around cashier, products, purchasing, stock monitoring, and Google Sheets-backed persistence.',
+    role:'Independent retail operations software project',
+    format:'Responsive web/PWA · React frontend + Vercel Node Functions',
+    statusDetail:'Development build · production acceptance testing pending',
+    sections:[
+      {label:'STORE OPERATIONS',title:'From checkout to inventory reconciliation',intro:'TokoFlow is designed for a single shop, covering retail checkout and daily product/inventory workflows.',points:[
+        'Maintain products and SKUs, purchases, cashier transactions, and stock movement views.',
+        'Support pack/carton/piece unit conversions, stock opname, expiry batches, and inventory indicators.',
+        'Include promotional pricing, discount rules, an audit trail, and thermal receipt print layouts.'
+      ]},
+      {label:'DATA & LOGIN',title:'Use an owner-controlled spreadsheet ledger',intro:'The current online architecture is a React/Vite frontend with same-origin Vercel functions and Google OAuth/Sheets storage.',points:[
+        'Use Google sign-in and create or reopen each owner account’s own spreadsheet through server-side integration.',
+        'Record inventory events in an append-only ledger with idempotency controls.',
+        'Keep OAuth secrets on the server and avoid claiming browser-local demo data as a production database.'
+      ]},
+      {label:'VALIDATION & LIMITS',title:'Production readiness requires real transaction tests',intro:'Code and documentation describe development-stage functionality; a working production deployment has not been verified.',points:[
+        'Verify end-to-end Google authorization, live data persistence, and cash register flows.',
+        'Test mobile barcode scanning, thermal printer hardware, simultaneous writes, and backup/restore.',
+        'Avoid claiming multi-store SaaS or automatic QRIS/EDC payment integration.'
+      ]}
+    ],
+    stack:['React 19','JavaScript','Vite 8','PWA','Node.js','Vercel Functions','Google Sheets API','OAuth 2.0'],
+    note:'Single-store in-development app. The legacy Laravel backend is not part of this Vercel + Google Sheets deployment architecture; no verified production readiness is claimed.'
+  },
   taxflow: {
     title:'TaxFlow',
     status:'PERSONAL PROJECT · LOCAL DEVELOPMENT',
